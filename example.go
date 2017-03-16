@@ -9,16 +9,15 @@ import (
 
 func main() {
 	resp, body, err := goreq.New().Get("http://www.baidu.com/").End()
-	//defer resp
-	//getproxy.Get(body)
+
 	fmt.Println(resp)
 	fmt.Println(body)
 	fmt.Println(err)
 
 	peers := getproxy.Get()
-	for _, v := range peers {
-		//fmt.Printf("index:%d  value:%d\n", i, v)
-		fmt.Println(v)
+	for i, v := range peers {
+		if checked := v.Check(); checked > 0 {
+			fmt.Printf("%d : (ip:%s, port:%s, type:%s,status:%d)\n", i, v.Ip, v.Port, v.Proto, v.Status)
+		}
 	}
-	//fmt.Println()
 }
