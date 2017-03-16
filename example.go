@@ -3,11 +3,15 @@ package main
 import (
 	"fmt"
 
+	"github.com/465583030/bee/useragent"
+
 	"github.com/465583030/bee/getproxy"
 	"github.com/465583030/bee/goreq"
 )
 
 func main() {
+	fmt.Println(useragent.GetRandomUserAgent())
+
 	resp, body, err := goreq.New().Get("http://www.baidu.com/").End()
 
 	fmt.Println(resp)
@@ -17,7 +21,7 @@ func main() {
 	peers := getproxy.Get()
 	for i, v := range peers {
 		if checked := v.Check(); checked > 0 {
-			fmt.Printf("%d : (ip:%s, port:%s, type:%s,status:%d)\n", i, v.Ip, v.Port, v.Proto, v.Status)
+			fmt.Printf("%d : (ip:%s, port:%s, type:%s, status:%d)\n", i, v.Ip, v.Port, v.Proto, v.Status)
 		}
 	}
 }
