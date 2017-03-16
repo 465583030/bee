@@ -19,7 +19,7 @@ var targets = []target{
 	target{build_cnproxy, parse_cnproxy},
 	target{build_proxylists, parse_proxylists},
 	target{build_cybersyndrome, parse_cybersyndrome},
-	target{build_cn_proxy, parse_cn_proxy},
+	//target{build_cn_proxy, parse_cn_proxy},
 	target{build_cz88, parse_cz88},
 	target{build_kxdaili, parse_kxdaili},
 	target{build_xicidaili, parse_xicidaili},
