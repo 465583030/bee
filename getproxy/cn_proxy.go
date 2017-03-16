@@ -13,7 +13,7 @@ func build_cn_proxy() []string {
 	return strs
 }
 
-func Parse_cn_proxy(body string) [][]string {
+func parse_cn_proxy(body string) [][]string {
 	reg, err := regexp.Compile("<tr>[\\s\\S]*?<td>(.*?)</td>[\\s\\S]*?<td>(.*?)</td>[\\s\\S]*?<td>(.*?)</td>[\\s\\S]*?</tr>")
 	if err != nil {
 		fmt.Println(err)
