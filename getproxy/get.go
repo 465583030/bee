@@ -20,12 +20,11 @@ var targets = []target{
 	target{build_proxylists, parse_proxylists},
 	target{build_cybersyndrome, parse_cybersyndrome},
 	target{build_cz88, parse_cz88},
-	target{build_kxdaili, parse_kxdaili},
-	target{build_xicidaili, parse_xicidaili},
-	target{build_ip181, parse_ip181},
 	target{build_httpdaili, parse_httpdaili},
-
+	target{build_ip181, parse_ip181},
+	target{build_kxdaili, parse_kxdaili},
 	target{build_pachong, parse_pachong},
+	target{build_xicidaili, parse_xicidaili},
 }
 
 var proxyaddrs [][]string
