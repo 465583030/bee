@@ -1,8 +1,8 @@
 package main
 
 import (
-	"465583030/getproxy"
-	"465583030/goreq"
+	"github.com/465583030/bee/getproxy"
+	"github.com/465583030/bee/goreq"
 )
 
 func main() {
