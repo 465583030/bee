@@ -42,8 +42,7 @@ import (
 	"golang.org/x/net/publicsuffix"
 )
 
-// Request represents an HTTP request received by a server
-// or to be sent by a client.
+// Request represents an HTTP request received by a server or to be sent by a client.
 type Request *http.Request
 
 // Response represents the response from an HTTP request.

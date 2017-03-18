@@ -7,24 +7,18 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/465583030/bee/goreq"
 	"github.com/465583030/bee/useragent"
 	"github.com/PuerkitoBio/goquery"
 )
 
-//"github.com/465583030/bee/getproxy"
-//"github.com/465583030/bee/goreq"
-
 func main() {
-	/*gr := goreq.New()
+	gr := goreq.New()
 	resp, body, err := gr.SetHeader("User-Agent", useragent.GetRandomUserAgent()).Get("http://www.baidu.com/").End()
 	fmt.Println(resp.Header)
 	fmt.Println(body)
-	fmt.Println(err)*/
+	fmt.Println(err)
 
-	/*request := gorequest.New()
-	resp, body, _ := request.Get("http://movie.douban.com/subject/2035218/?from=tag_all").End()
-	defer resp.Body.Close()
-	fmt.Println(body)*/
 	/*peers := getproxy.Get()
 	for i, v := range peers {
 		if checked := v.Check(); checked > 0 {
@@ -42,6 +36,7 @@ func douban() {
 	body, _ := ioutil.ReadAll(resp.Body)
 
 	pipe := PipeItem{}
+
 	err = json.Unmarshal([]byte(`
 		{
 			"type": "map",
